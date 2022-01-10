@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16.6-bookworm
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: app
+    ports:
+      - "5432:5432"
+  postgres-test:
+    image: postgres:16.6-bookworm
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: app_test
+    ports:
+      - "5433:5432"
