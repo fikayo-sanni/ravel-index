@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { depthRefreshOrder, ViewNode } from '../kernel/views';
+import { refreshOrder, ViewNode } from '../kernel/views';
 
 @Injectable()
 export class RefreshService {
-  plan(nodes: ViewNode[]) { return depthRefreshOrder(nodes); }
+  plan(nodes: ViewNode[]) { return refreshOrder(nodes); }
 }
