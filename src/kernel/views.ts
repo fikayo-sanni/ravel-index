@@ -15,7 +15,7 @@ export function dependencyClosure(nodes: ViewNode[], changed: ViewId): Set<ViewI
     if (out.has(cur)) continue;
     out.add(cur);
     for (const n of nodes) {
-      if (n.dependsOn.includes(changed) && !out.has(n.id)) stack.push(n.id);
+      if (n.dependsOn.includes(cur) && !out.has(n.id)) stack.push(n.id);
     }
   }
   return out;
