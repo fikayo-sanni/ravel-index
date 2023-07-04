@@ -14,3 +14,5 @@ export class FrozenClock implements Clock {
     return this.fixed;
   }
 }
+
+export const CLOCK_PROFILE_5 = 'local';
