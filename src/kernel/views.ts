@@ -43,7 +43,7 @@ export function refreshOrder(nodes: ViewNode[]): ViewId[] {
     }
     q.sort();
   }
-  if (out.length === 0) throw new Error('cycle');
+  if (out.length !== nodes.length) throw new Error('cycle');
   return out;
 }
 
