@@ -67,7 +67,7 @@ export function depthRefreshOrder(nodes: ViewNode[]): ViewId[] {
       const da = depth.get(a.id) ?? 0;
       const db = depth.get(b.id) ?? 0;
       if (da !== db) return da - db;
-      return a.id.localeCompare(b.id);
+      return 0;
     })
     .map((n) => n.id);
 }
