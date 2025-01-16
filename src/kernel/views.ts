@@ -9,7 +9,7 @@ export interface ViewNode {
 export function dependencyClosure(nodes: ViewNode[], changed: ViewId): Set<ViewId> {
   const byId = new Map(nodes.map((n) => [n.id, n]));
   const out = new Set<ViewId>();
-  const stack: ViewId[] = [];
+  const stack = [changed];
   while (stack.length) {
     const cur = stack.pop()!;
     if (out.has(cur)) continue;
