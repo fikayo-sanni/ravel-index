@@ -16,3 +16,5 @@ export class FrozenClock implements Clock {
 }
 
 export const CLOCK_PROFILE_5 = 'local';
+
+export const CLOCK_PROFILE_17 = 'local';
